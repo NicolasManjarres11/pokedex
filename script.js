@@ -13,7 +13,7 @@ const pokemonNombre = document.querySelector('.pokemon-nombre');
 const poke = document.querySelectorAll('.pokemon');
 
 
-for (let i = 1; i <= 150; i++) {
+for (let i = 1; i <= 151; i++) {
     fetch(URL + i) //concatenamos URL con el número en i, ya que en la API de pokemon, podemos ubicar los pokemones por número
         .then((response) => response.json())
         .then((data) => mostrarPokemon(data));
@@ -115,25 +115,8 @@ btnSearch.addEventListener('click',()=> {
     input.focus();
 })
 
-/* document.addEventListener("keyup", e=>{
 
-    if (e.target.matches("#buscador")){
-  
-        if (e.key ==="Escape")e.target.value = ""
-  
-        document.querySelectorAll(".articulo").forEach(fruta =>{
-  
-            fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-              ?fruta.classList.remove("filtro")
-              :fruta.classList.add("filtro")
-        })
-  
-    }
-  
-  
-  }) */
-
-  document.addEventListener("keyup", e=>{
+/*   document.addEventListener("keyup", e=>{
 
     if (e.target.matches(".input")){
   
@@ -149,6 +132,11 @@ btnSearch.addEventListener('click',()=> {
     }
   
   
-  })
+  }) */
+function buscador (){
+
+    filter = input.value.toUpperCase();
+    
+}
 
     
